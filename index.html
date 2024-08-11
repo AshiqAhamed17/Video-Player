@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <div class="video-item" data-video-src="video1.mp4">
+            <div class="video-thumbnail">
+                <img src="video1-thumbnail.jpg" alt="Video 1">
+                <div class="play-button">&#9658;</div>
+            </div>
+        </div>
+        <div class="video-item" data-video-src="video2.mp4">
+            <div class="video-thumbnail">
+                <img src="video2-thumbnail.jpg" alt="Video 2">
+                <div class="play-button">&#9658;</div>
+            </div>
+        </div>
+        <div class="video-item" data-video-src="video3.mp4">
+            <div class="video-thumbnail">
+                <img src="video3-thumbnail.jpg" alt="Video 3">
+                <div class="play-button">&#9658;</div>
+            </div>
+        </div>
+        <div class="video-item" data-video-src="video4.mp4">
+            <div class="video-thumbnail">
+                <img src="video4-thumbnail.jpg" alt="Video 4">
+                <div class="play-button">&#9658;</div>
+            </div>
+        </div>
+        <div class="video-item" data-video-src="video5.mp4">
+            <div class="video-thumbnail">
+                <img src="video5-thumbnail.jpg" alt="Video 5">
+                <div class="play-button">&#9658;</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup container for the video player -->
+    <div class="video-popup" id="video-popup">
+        <div class="video-popup-content">
+            <video controls autoplay>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
