@@ -1,42 +1,64 @@
 body {
-    background-color: #000; /* Dark background */
-    color: #fff; /* White text */
+    background-color: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Added this to allow a header */
+}
+
+
+#header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 200px;
+    width: 100%;
+    
 }
 
 .video-section {
     display: flex;
     overflow-x: auto;
     padding: 20px;
-    gap: -80px; /* Overlapping effect */
+    gap: 20px; /* Increased gap for better spacing */
     align-items: center;
     justify-content: center;
+    max-width: 90%; /* Increased width slightly */
 }
 
 .video-item {
     position: relative;
     flex: 0 0 auto;
-    width: 150px; /* Adjust based on design */
+    width: 220px; /* Increased size */
+    height: 160px; /* Added fixed height */
     cursor: pointer;
 }
 
 .video-thumbnail {
     position: relative;
-    background-color: #333; /* Placeholder background */
-    border-radius: 15px; /* Rounded corners */
+    background-color: #333;
+    border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 100%; /* Ensures the thumbnail fills the item */
 }
 
 .video-thumbnail img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 15px;
 }
 
 .video-item:hover .video-thumbnail {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1);
 }
 
 .play-button {
@@ -44,12 +66,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
+    font-size: 30px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .video-popup {
@@ -59,7 +81,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Blurred background */
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
 }
@@ -76,7 +98,8 @@ body {
 
 @media (max-width: 768px) {
     .video-item {
-        width: 100px; /* Smaller size for mobile */
+        width: 160px;
+        height: 120px;
     }
 
     .video-popup-content {
